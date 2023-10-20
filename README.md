@@ -49,7 +49,7 @@ The following table compares terminology used by select NoSQL databases with ter
 |Index	|Index	|Secondary index	|Index	|Index|
 |View	|View	|Global secondary index	|Materialized view	|View|
 |Nested table or object	|Embedded document	|Map	|Map	|Map|
-|Array	|Array	|List	|List	List| 
+|Array	|Array	|List	|List	|List| 
  
 ## What are the types of NoSQL databases
 There are several different NoSQL database systems due to variations in the way they manage and store schema-less data. We explain some of the common types below.
@@ -74,25 +74,10 @@ SQL databases model data relationships as tables. The rows in the table represen
 
  
 
-Relational databases
-
-NoSQL databases
-
-Optimal workloads
-
- 
-
- 
-
-Relational databases are designed for transactional and strongly consistent online transaction processing (OLTP) applications. They are also good for online analytical processing (OLAP).   
-
-NoSQL databases are designed for a number of data access patterns that include low-latency applications. NoSQL search databases are designed for analytics over semi-structured data.
-
- 
-
-Data model
-
-The relational model normalizes data into tables that are composed of rows and columns. A schema strictly defines the tables, rows, columns, indexes, relationships between tables, and other database elements. The database enforces referential integrity in relationships between tables.
+| |Relational databases |NoSQL databases|
+|:--- |:--- |:--- |
+Optimal workloads|Relational databases are designed for transactional and strongly consistent online transaction processing (OLTP) applications. They are also good for online analytical processing (OLAP).|NoSQL databases are designed for a number of data access patterns that include low-latency applications. NoSQL search databases are designed for analytics over semi-structured data.|
+|Data model|The relational model normalizes data into tables that are composed of rows and columns. A schema strictly defines the tables, rows, columns, indexes, relationships between tables, and other database elements. The database enforces referential integrity in relationships between tables.
 
 NoSQL databases provide a variety of data models, such as key-value, document, graph, and column, which are optimized for performance and scale.
 
