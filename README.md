@@ -1,4 +1,4 @@
-# Redis. NoSQL Databases
+# NoSQL Databases. Redis
 NoSQL is a database technology that stores data in flexible schemas that scale easily. For decades, the predominant data model in application development was the relational data model that stored data in tables made of rows and columns. Structured Query Language (SQL) was used to create and edit these relational tables. It wasn’t until the mid to late 2000s that other flexible data models began to gain significant adoption and usage. To differentiate and categorize these new classes of databases and data models, the term NoSQL was coined. NoSQL stands for not only SQL or non-SQL. Often the term NoSQL is used interchangeably with the term non-relational.
 
 ## What are the advantages of NoSQL databases
