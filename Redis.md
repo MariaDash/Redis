@@ -116,8 +116,59 @@ OK
 ```
 As a tester you need to check if the token exists ( command `exists`) and its lifetime (`ttl`) and how it is expiring.
 ### How large data is stored in Redis Database
-
-
-
-
-
+HSET - Sets the specified fields to their respective values in the hash stored at key. This command overwrites the values of specified fields that exist in the hash. If key doesn't exist, a new key holding a hash is created.
+```
+127.0.0.1:6379>hset p1 name "Vadim"
+(integer) 1
+127.0.0.1:6379>hset p1 age 33
+(integer) 1
+127.0.0.1:6379>hset p1 salary 1000
+(integer) 1
+127.0.0.1:6379>hgetall p1
+1) "name"
+2) "Vadim"
+3) "age"
+4) "33"
+5) "salary"
+6) "1000"
+127.0.0.1:6379>hkeys p1
+1) "name"
+2) "age"
+3) "salary"
+127.0.0.1:6379>hvals p1
+1) "Vadim"
+2) "33"
+3) "1000"
+127.0.0.1:6379>
+```
+Expire and persist ( deleting of timer):
+```
+127.0.0.1:6379>expire p1 20
+(integer) 1
+127.0.0.1:6379>ttl p1
+(integer) 16
+127.0.0.1:6379>ttl p1
+(integer) 11
+127.0.0.1:6379>ttl p1
+(integer) 6
+127.0.0.1:6379>ttl p1
+(integer) 3
+127.0.0.1:6379>ttl p1
+(integer) 1
+127.0.0.1:6379>persist p1
+(integer) 1
+127.0.0.1:6379>
+```
+Checking:
+```
+127.0.0.1:6379>hgetall p1
+1) "name"
+2) "Vadim"
+3) "age"
+4) "33"
+5) "salary"
+6) "1000"
+127.0.0.1:6379>ttl p1
+(integer) -1
+127.0.0.1:6379>
+```
