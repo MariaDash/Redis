@@ -1,5 +1,5 @@
 # https://redis.io/
-## How to run in command line:
+## How to run Redis in command line:
 ```
 Admin@DESKTOP-V6V9F0T MINGW64 /
 $ redis-cli
