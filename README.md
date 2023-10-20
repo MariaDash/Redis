@@ -77,19 +77,8 @@ SQL databases model data relationships as tables. The rows in the table represen
 | |Relational databases |NoSQL databases|
 |:--- |:--- |:--- |
 Optimal workloads|Relational databases are designed for transactional and strongly consistent online transaction processing (OLTP) applications. They are also good for online analytical processing (OLAP).|NoSQL databases are designed for a number of data access patterns that include low-latency applications. NoSQL search databases are designed for analytics over semi-structured data.|
-|Data model|The relational model normalizes data into tables that are composed of rows and columns. A schema strictly defines the tables, rows, columns, indexes, relationships between tables, and other database elements. The database enforces referential integrity in relationships between tables.
-
-NoSQL databases provide a variety of data models, such as key-value, document, graph, and column, which are optimized for performance and scale.
-
-ACID properties
-
-Relational databases provide atomicity, consistency, isolation, and durability (ACID) properties:
-
-Atomicity requires a transaction to execute completely or not at all.
-Consistency requires that the data must conform to the database schema when a transaction has been committed.
-Isolation requires that concurrent transactions execute separately from each other.
-Durability requires the ability to recover from an unexpected system failure or power outage to the last known state.
-Most NoSQL databases offer trade-offs by relaxing some of the ACID properties of relational databases in favor of a more flexible data model that can scale horizontally. This makes NoSQL databases an excellent choice for high-throughput, low-latency use cases that need to scale horizontally beyond the limitations of a single instance.
+|Data model|The relational model normalizes data into tables that are composed of rows and columns. A schema strictly defines the tables, rows, columns, indexes, relationships between tables, and other database elements. The database enforces referential integrity in relationships between tables.|NoSQL databases provide a variety of data models, such as key-value, document, graph, and column, which are optimized for performance and scale.|
+|ACID properties|Relational databases provide atomicity, consistency, isolation, and durability (ACID) properties:+ Atomicity requires a transaction to execute completely or not at all. + Consistency requires that the data must conform to the database schema when a transaction has been committed.+ Isolation requires that concurrent transactions execute separately from each other.+ Durability requires the ability to recover from an unexpected system failure or power outage to the last known state.|Most NoSQL databases offer trade-offs by relaxing some of the ACID properties of relational databases in favor of a more flexible data model that can scale horizontally. This makes NoSQL databases an excellent choice for high-throughput, low-latency use cases that need to scale horizontally beyond the limitations of a single instance.|
 
 Performance
 
