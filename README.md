@@ -1,4 +1,4 @@
-# Redis
+# Redis. NoSQL Databases
 NoSQL is a database technology that stores data in flexible schemas that scale easily. For decades, the predominant data model in application development was the relational data model that stored data in tables made of rows and columns. Structured Query Language (SQL) was used to create and edit these relational tables. It wasn’t until the mid to late 2000s that other flexible data models began to gain significant adoption and usage. To differentiate and categorize these new classes of databases and data models, the term NoSQL was coined. NoSQL stands for not only SQL or non-SQL. Often the term NoSQL is used interchangeably with the term non-relational.
 
 ## What are the advantages of NoSQL databases
@@ -54,7 +54,7 @@ The following table compares terminology used by select NoSQL databases with ter
 ## What are the types of NoSQL databases
 There are several different NoSQL database systems due to variations in the way they manage and store schema-less data. We explain some of the common types below.
 
-### 1. Key-value databases
+### 1. Key-value databases (Redis)
 Key-value databases are highly partitionable and allow horizontal scaling at a level that other types of NoSQL databases may not achieve. A key-value database stores data as a collection of key-value pairs in which a key serves as a unique identifier. Keys and values can be anything, ranging from simple objects to complex compound objects. Use cases such as gaming, ad tech, and IoT lend themselves particularly well to the key-value store data design.
 
 ### 2. Document databases
