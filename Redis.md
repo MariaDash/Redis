@@ -26,7 +26,7 @@ OK
 "Mariia"
 127.0.0.1:6379>
 ```
-to check:
+To check:
 ```
 127.0.0.1:6379>quit
 Admin@DESKTOP-V6V9F0T MINGW64 /
@@ -34,7 +34,7 @@ $redis-cli
 127.0.0.1:6379>get k1
 "Mariia"
 ```
-to check if the object exists:
+### To check if the object exists:
 ```
 127.0.0.1:6379>exists k1
 (integer) 1
@@ -45,8 +45,54 @@ to check if the object exists:
 (integer) 0
 ```
 "0" means "not exists"
+
 If we ask to show not existing object we will have "nil":
 ```
 127.0.0.1:6379>get kk1
 (nil)
 ```
+### To delete all from database:
+```
+127.0.0.1:6379>flushall
+OK
+```
+### Assigning lifetime to object:
+Inputing the value and lifetime to object:
+
+!!!Inputing some value: all values will be of  string type!!!
+
+`ex` - lifetime in seconds, `px` - lifetime in milliseconds
+```
+127.0.0.1:6379>set k1 222 ex 60
+OK
+127.0.0.1:6379>
+```
+To see left time for the object we use `ttl` - time to live - command
+```
+127.0.0.1:6379>ttl k1
+(integer) 51
+127.0.0.1:6379>
+```
+!!! positive integer for `ttl` command means the object exists for example
+```
+127.0.0.1:6379>ttl k1
+(integer) 51
+127.0.0.1:6379>
+```
+negative integer for `ttl` command means the object doesn't exist in the database for example
+```
+127.0.0.1:6379>ttl k1
+(integer) -2
+127.0.0.1:6379>
+```
+To update existing burning counter for the existing object (real mechanizm of updating login token when user is away from the app and then come back and try to login after 10 minutes for example):
+```
+127.0.0.1:6379>setex k1 120 333
+OK
+127.0.0.1:6379>
+```
+first digit is lifetime , second digit is the value.
+
+
+
+
